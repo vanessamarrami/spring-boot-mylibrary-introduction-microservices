@@ -27,14 +27,6 @@ L'obiettivo principale è studiare le basi di Spring Cloud e delle sue funzional
    - Aggiunge un gateway API (Spring Cloud Gateway) per semplificare l'accesso ai microservizi.
    - Configura il gateway per reindirizzare le richieste ai microservizi appropriati in base al percorso.
 
-## Configurazione e Utilizzo
-
-Per eseguire il progetto, seguire i seguenti passaggi:
-
-1. Configurare EurekaServer per la registrazione dei microservizi.
-2. Eseguire i microservizi LibraryService, LibraryStatisticsService e APIGateway.
-3. Accedere a Eureka Dashboard per verificare la registrazione dei microservizi.
-
 ## Docker-Compose per il Database
 
 È incluso un docker-compose per il database, popolato con informazioni sui libri e sugli autori. È possibile utilizzare lo stesso contenitore per eventuali altri database implementati (i servizi si collegheranno allo stesso contenitore, ma non allo stesso DB).
