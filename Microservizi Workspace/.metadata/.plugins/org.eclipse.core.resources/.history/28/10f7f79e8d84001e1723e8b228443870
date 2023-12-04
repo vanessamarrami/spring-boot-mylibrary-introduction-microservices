@@ -1,0 +1,23 @@
+package com.statistics.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/book-statistics")
+public class StatisticsBookController {
+	
+	/* Restituisce una stringa con: 
+	 * - il numero di libri di quel genere
+	 * - il numero totale di libri nel catalogo
+	 * - la percentuale.
+	 * Richiama LibraryService passando il genere nella chiamata, ottiene 
+	 * la lista dei libri di quel genere e il numero di libri totali. */
+	@GetMapping("/{genre}")
+	public ResponseEntity<String> basedGenre(){
+		
+		return null;
+	}
+}

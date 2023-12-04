@@ -1,0 +1,17 @@
+package com.statistics.dto;
+
+import java.time.LocalDate;
+import java.util.Set;
+
+public class BookDto {
+	
+	private String isbn;
+	private String title;
+	private String genre;
+	private String plot;
+	private LocalDate publicationDate;
+	private int numberPages;
+	private Set<AuthorSlimDto> authors;
+	
+	
+}

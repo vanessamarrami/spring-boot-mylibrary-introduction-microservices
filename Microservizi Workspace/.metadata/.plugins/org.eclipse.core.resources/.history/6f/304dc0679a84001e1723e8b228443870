@@ -1,0 +1,43 @@
+package com.statistics.service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.statistics.client.LibraryClient;
+import com.statistics.dto.AuthorDto;
+import com.statistics.dto.BookDto;
+import com.statistics.dto.BookSlimDto;
+
+@Service
+public class StatisticsLibraryService {
+	
+	@Autowired
+	LibraryClient client;
+	
+	public int numberOfTotalBooks() {
+		List<BookDto> books = client.listAllBook();
+		return books.size();
+	}
+	
+	public int basedGenre(String genre) {
+		List<BookDto> books = client.getByGenre(genre);
+		return books.size();
+	}
+	
+	public int basedPublicationDate(LocalDate date) {
+		List<BookDto> books = client.getAfterPublicationDate(date);
+		return books.size();
+	}
+	
+	public int basedAuthor(String firstName, String lastName) {
+		List<AuthorDto> books = client.listAuthorByNameAndSurname(firstName, lastName);
+		return 0;
+	}
+	
+	public double percent(double a, double b) {
+		return a / b * 100; 
+	}
+}

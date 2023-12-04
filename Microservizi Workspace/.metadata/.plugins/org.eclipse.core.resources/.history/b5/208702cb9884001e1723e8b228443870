@@ -1,0 +1,30 @@
+package com.statistics.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.statistics.service.StatisticsLibraryService;
+
+@RestController
+@RequestMapping("/api/book-statistics")
+public class StatisticsLibraryController {
+	
+	@Autowired
+	StatisticsLibraryService service;
+	
+	@GetMapping("/{genre}")
+	public ResponseEntity<String> basedGenre(@PathVariable String genre){
+		
+		int numberOfGenre = service.basedGenre(genre);
+		int numbersTotal = service.numberOfTotalBooks();
+		String result = String.format("There are %d out of %d books of genre %s in the library."
+                + " Percentage: %.2f.",
+                numberOfGenre, numbersTotal, genre, service.percent(numberOfGenre, numbersTotal));
+		return new ResponseEntity<String>(result , HttpStatus.OK);
+	}
+}

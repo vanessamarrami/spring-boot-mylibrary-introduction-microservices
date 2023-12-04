@@ -1,0 +1,32 @@
+package com.statistics.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.statistics.service.StatisticsBookService;
+
+@RestController
+@RequestMapping("/api/book-statistics")
+public class StatisticsBookController {
+	
+	@Autowired
+	StatisticsBookService service;
+	
+	/* Restituisce una stringa con: 
+	 * - il numero di libri di quel genere
+	 * - il numero totale di libri nel catalogo
+	 * - la percentuale.
+	 * Richiama LibraryService passando il genere nella chiamata, ottiene 
+	 * la lista dei libri di quel genere e il numero di libri totali. */
+	
+	//per testare deve rappresentare solo il numero dei libri di quel genere
+	@GetMapping("/{genre}")
+	public ResponseEntity<String> basedGenre(@PathVariable String genre){
+		return new ResponseEntity<String>(service.basedGenre(genre), HttpStatus.OK);
+	}
+}

@@ -1,0 +1,41 @@
+package com.statistics.client;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import com.statistics.dto.AuthorDto;
+import com.statistics.dto.BookDto;
+
+public class LibraryClientFallBack implements LibraryClient {
+
+	@Override
+	public String getInstanceId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BookDto> listAllBook() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BookDto> getByGenre(String genre) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BookDto> getAfterPublicationDate(LocalDate date) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AuthorDto listAuthorByNameAndSurname(String firstName, String lastName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

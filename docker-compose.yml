@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mysqlLibraryMicroservice:
+    image: mysql:8.0
+    restart: unless-stopped
+    container_name: mysqlLibraryService
+    volumes: 
+       - type: bind
+         source: ./dockervol
+         target: /var/lib/mysql
+    ports:
+        - target: 3306
+          published: 1570 #Porta macchina Host. 
+          protocol: tcp
+          mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: 123Microservice
+      MYSQL_DATABASE: LibraryMicroservice
+      MYSQL_USER: sa
+      MYSQL_PASSWORD: 123Microservice
+volumes:
+  mysqlLibraryMicroservice-data:

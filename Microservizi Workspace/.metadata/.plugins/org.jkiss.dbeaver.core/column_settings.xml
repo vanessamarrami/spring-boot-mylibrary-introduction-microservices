@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/MySQLTableColumn">
+		<column name="Nome colonna" visible="true" order="0" width="131"/>
+		<column name="#" visible="true" order="1" width="100"/>
+		<column name="Data Type" visible="true" order="2" width="111"/>
+		<column name="Not Null" visible="true" order="3" width="100"/>
+		<column name="Auto Increment" visible="true" order="4" width="137"/>
+		<column name="Key" visible="true" order="5" width="100"/>
+		<column name="Default" visible="true" order="6" width="100"/>
+		<column name="Extra" visible="true" order="7" width="135"/>
+		<column name="Expression" visible="true" order="8" width="100"/>
+		<column name="Comment" visible="true" order="9" width="100"/>
+	</item>
+</items>
