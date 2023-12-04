@@ -1,6 +1,6 @@
-# Progetto MyLibrary - Introduzione all'Architettura a Microservizi con Spring Boot
+# Progetto MyLibrary - Introduzione all'architettura a Microservizi con Spring Boot
 
-Questo repository, denominato "spring-boot-mylibrary-introduction-microservices", è un'estensione del progetto "MyLibrary" implementando un'architettura a microservizi con l'ausilio di Spring Cloud.
+Questo repository, "spring-boot-mylibrary-introduction-microservices", è un'estensione del progetto "MyLibrary" implementando un'architettura a microservizi con Spring Cloud.
 
 ## Scopo del Progetto
 
@@ -21,10 +21,10 @@ L'obiettivo principale è studiare le basi di Spring Cloud e delle sue funzional
    - Implementazione:
      - Utilizza i dati forniti dal servizio LibraryService tramite chiamate REST.
      - Esegue elaborazioni aggiuntive su questi dati per generare le statistiche richieste.
-     - Restituisce le statistiche in formato JSON.
+     - Restituisce le statistiche tramite una stringa.
 
 3. **APIGateway:**
-   - Aggiunge un gateway API (ad esempio, Spring Cloud Gateway) per semplificare l'accesso ai microservizi.
+   - Aggiunge un gateway API (Spring Cloud Gateway) per semplificare l'accesso ai microservizi.
    - Configura il gateway per reindirizzare le richieste ai microservizi appropriati in base al percorso.
 
 ## Configurazione e Utilizzo
@@ -37,4 +37,4 @@ Per eseguire il progetto, seguire i seguenti passaggi:
 
 ## Docker-Compose per il Database
 
-È incluso un docker-compose per il database, popolato con informazioni sui libri e sugli autori. È possibile utilizzare lo stesso contenitore per eventuali altri database implementati(i servizi si collegheranno allo stesso contenitore, ma non allo stesso DB).
+È incluso un docker-compose per il database, popolato con informazioni sui libri e sugli autori. È possibile utilizzare lo stesso contenitore per eventuali altri database implementati (i servizi si collegheranno allo stesso contenitore, ma non allo stesso DB).
