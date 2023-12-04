@@ -19,7 +19,7 @@ L'obiettivo principale è studiare le basi di Spring Cloud e delle sue funzional
      - `GET /api/book-statistics/date/{date}`: Restituisce il numero e la percentuale dei libri pubblicati dopo una determinata data.
      - `GET /api/book-statistics/name/{firstName}/{lastName}`: Restituisce il numero dei libri scritti da un determinato autore.
    - Implementazione:
-     - Utilizza i dati forniti dal servizio LibraryService tramite chiamate REST.
+     - Utilizza i dati forniti dal servizio LibraryService tramite chiamate REST, sfruttando OpenFeign per semplificare la comunicazione.
      - Esegue elaborazioni aggiuntive su questi dati per generare le statistiche richieste.
      - Restituisce le statistiche tramite una stringa.
 
