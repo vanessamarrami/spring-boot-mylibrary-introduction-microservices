@@ -1,8 +1,0 @@
-package com.statistics.client;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-@FeignClient("LibraryService")
-public interface BookClient {
-
-}

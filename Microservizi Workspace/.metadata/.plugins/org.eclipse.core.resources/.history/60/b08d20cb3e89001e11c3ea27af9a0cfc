@@ -1,5 +1,0 @@
-package com.statistics.exception;
-
-public class ConnectionrefusedExceptions extends RuntimeException {
-
-}

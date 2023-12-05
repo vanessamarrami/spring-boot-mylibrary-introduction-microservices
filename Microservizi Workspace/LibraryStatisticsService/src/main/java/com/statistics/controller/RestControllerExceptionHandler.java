@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.statistics.exception.ConnectionrefusedExceptions;
+import com.statistics.exception.ConnectionRefusedExceptions;
 import com.statistics.exception.ErrorResponse;
 import com.statistics.exception.NotFoundException;
 
@@ -21,8 +21,8 @@ public class RestControllerExceptionHandler{
 		 return new ResponseEntity<ErrorResponse>(error, HttpStatus.NOT_FOUND);
 	 }
 	
-	@ExceptionHandler(ConnectionrefusedExceptions.class)
-	 public ResponseEntity<ErrorResponse> handleNoFoundException(ConnectionrefusedExceptions ex) {
+	@ExceptionHandler(ConnectionRefusedExceptions.class)
+	 public ResponseEntity<ErrorResponse> handleNoFoundException(ConnectionRefusedExceptions ex) {
 		 
 		 ErrorResponse error = new ErrorResponse();
 		 error.setCode(HttpStatus.SERVICE_UNAVAILABLE.value());

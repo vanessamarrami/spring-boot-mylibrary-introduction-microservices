@@ -1,12 +1,12 @@
 package com.statistics.exception;
 
-public class ConnectionrefusedExceptions extends RuntimeException {
+public class ConnectionRefusedExceptions extends RuntimeException {
 
 	private static final long serialVersionUID = -2359369137104416919L;
 
-private String message;
+	private String message;
 	
-	public ConnectionrefusedExceptions(String message) {
+	public ConnectionRefusedExceptions(String message) {
 		super(message);
 		this.message = message;
 	}

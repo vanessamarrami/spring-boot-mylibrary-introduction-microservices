@@ -12,7 +12,7 @@ import com.statistics.client.LibraryClient;
 import com.statistics.dto.AuthorDto;
 import com.statistics.dto.BookDto;
 import com.statistics.dto.BookSlimDto;
-import com.statistics.exception.ConnectionrefusedExceptions;
+import com.statistics.exception.ConnectionRefusedExceptions;
 import com.statistics.exception.NotFoundException;
 
 import feign.FeignException;
@@ -30,7 +30,7 @@ public class StatisticsLibraryService {
 		try {
 			instance = client.getInstanceId();
 		}catch(FeignException e) {
-			throw new ConnectionrefusedExceptions("Connessione rifiutata");
+			throw new ConnectionRefusedExceptions("Connection refused.");
 		}
 		return instance;
 	}
@@ -42,7 +42,7 @@ public class StatisticsLibraryService {
 		}catch(FeignClientException e) {
 			throw new NotFoundException("There is no book!");
 		}catch(FeignServerException e) {
-			throw new ConnectionrefusedExceptions("Connessione rifiutata");
+			throw new ConnectionRefusedExceptions("Connection refused.");
 		}
 		return books.size();
 	}
@@ -54,7 +54,7 @@ public class StatisticsLibraryService {
 		}catch(FeignClientException e) {
 			throw new NotFoundException(String.format("There are no books with genre %s!", genre));
 		}catch(FeignServerException e) {
-		throw new ConnectionrefusedExceptions("Connessione rifiutata");
+		throw new ConnectionRefusedExceptions("Connection refused.");
 	}
 		return books.size();
 	}
@@ -66,7 +66,7 @@ public class StatisticsLibraryService {
 		}catch(FeignClientException e) {
 			throw new NotFoundException(String.format("There are no books published after %s!", date));
 		}catch(FeignServerException e) {
-		throw new ConnectionrefusedExceptions("Connessione rifiutata");
+		throw new ConnectionRefusedExceptions("Connection refused.");
 	}
 		return books.size();
 	}
@@ -78,7 +78,7 @@ public class StatisticsLibraryService {
 		}catch(FeignClientException e) {
 			throw new NotFoundException("There is no author with the specified name.");
 		}catch(FeignServerException e) {
-		throw new ConnectionrefusedExceptions("Connessione rifiutata");
+		throw new ConnectionRefusedExceptions("Connection refused.");
 		}
 		Set<BookSlimDto> books = author.getBooks();
 		return books.size();
