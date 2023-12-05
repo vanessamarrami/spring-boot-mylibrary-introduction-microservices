@@ -22,7 +22,7 @@ public class StatisticsLibraryController {
 	
 	@GetMapping("/instanceId")
 	public String instanceId(){
-		return "LibraryStatisticService richiama l'istanza di LibraryService numero: " 
+		return "LibraryStatisticService calls the instance of LibraryService number: " 
 				+ service.getInstance();
 	}
 	
